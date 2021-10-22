@@ -30,8 +30,10 @@ class MyStackDLLBImplTest {
      * */
     @Test
     void pop() {
-        stackOfInts.push(32);
-        assertEquals(32, stackOfInts.pop());
+        stackOfInts.push(11);
+        assertEquals(11, stackOfInts.pop());
+        assertEquals(0, stackOfInts.numOfElems());
+
     }
 
     /**
@@ -41,8 +43,8 @@ class MyStackDLLBImplTest {
      * */
     @Test
     void push() {
-        stackOfInts.push(48);
-        stackOfInts.peek();
+        stackOfInts.push(36);
+        assertEquals(36, stackOfInts.peek());
     }
 
     /**
@@ -52,10 +54,10 @@ class MyStackDLLBImplTest {
      * */
     @Test
     void numOfElems() {
-        stackOfInts.push(64);
         stackOfInts.push(12);
-        stackOfInts.push(20);
-        stackOfInts.push(23);
+        stackOfInts.push(13);
+        stackOfInts.push(21);
+        stackOfInts.push(25);
 
         assertEquals(4, stackOfInts.numOfElems());
 
@@ -68,8 +70,8 @@ class MyStackDLLBImplTest {
      * */
     @Test
     void peek() {
-        stackOfInts.push(24);
-        stackOfInts.push(37);
-        assertEquals(37, stackOfInts.peek());
+        stackOfInts.push(13);
+        stackOfInts.push(43);
+        assertEquals(43, stackOfInts.peek());
     }
 }

@@ -28,9 +28,9 @@ class MyQueueDLLBImplTest {
      * */
     @Test
     void enqueue() {
-        queueOfInts.enqueue(5);
-        queueOfInts.enqueue(17);
-        assertEquals(5, queueOfInts.dequeue());
+        queueOfInts.enqueue(6);
+        queueOfInts.enqueue(20);
+        assertEquals(6, queueOfInts.dequeue());
     }
 
     /**
@@ -40,8 +40,9 @@ class MyQueueDLLBImplTest {
      * */
     @Test
     void dequeue() {
-        queueOfInts.enqueue(64);
-        assertEquals(64, queueOfInts.dequeue());
+        queueOfInts.enqueue(13);
+        assertEquals(13, queueOfInts.dequeue());
+        assertEquals(0, queueOfInts.numOfElems());
 
     }
 
@@ -52,10 +53,10 @@ class MyQueueDLLBImplTest {
      * */
     @Test
     void numOfElems() {
-        queueOfInts.enqueue(64);
-        queueOfInts.enqueue(12);
-        queueOfInts.enqueue(20);
-        queueOfInts.enqueue(23);
+        queueOfInts.enqueue(67);
+        queueOfInts.enqueue(13);
+        queueOfInts.enqueue(10);
+        queueOfInts.enqueue(29);
 
         assertEquals(4, queueOfInts.numOfElems());
 
@@ -68,10 +69,10 @@ class MyQueueDLLBImplTest {
      * */
     @Test
     void peek() {
-        queueOfInts.enqueue(74);
-        queueOfInts.enqueue(14);
-        queueOfInts.enqueue(67);
+        queueOfInts.enqueue(61);
+        queueOfInts.enqueue(11);
+        queueOfInts.enqueue(77);
 
-        assertEquals(74, queueOfInts.peek());
+        assertEquals(61, queueOfInts.peek());
     }
 }
